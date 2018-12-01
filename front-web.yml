@@ -4,13 +4,13 @@ message: "hello, spring cloud -default"
 spring:
   profiles: local
 
-message: "hello, spring cloud -local"
+message: "hi, spring cloud -local"
 
 ---
 spring:
   profiles: dock-local
 
-message: "hello, spring cloud -local"
+message: "hello, spring cloud -doc local"
 
 ---
 
