@@ -1,9 +1,11 @@
+---
 message: "hello, spring cloud -default"
 
 ---
 spring:
   profiles: local
   
+
 server:
   port: 9000
 
