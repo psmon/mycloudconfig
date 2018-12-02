@@ -1,5 +1,7 @@
 # centralized-configuration 
 
+## fist common config : application.yml
+
 ## config sample : {appname}.yml
 
   message: "hello, spring cloud -default"
@@ -15,6 +17,10 @@
     profiles: dock-local
   
   message: "hello, spring cloud -doc local"
+
+## last
+
+application.yml + {appname}.yml
 
 
 ## select spring config
