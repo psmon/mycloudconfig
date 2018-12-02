@@ -1,16 +1,21 @@
-message: "hello, spring cloud -default"
+---
+message: "hello, spring cloud game api -default"
 
 ---
 spring:
   profiles: local
+  
+server:
+  port: 9001
 
-message: "hi, spring cloud -local"
+
+message: "hello, spring cloud game api -local"
 
 ---
 spring:
   profiles: dock-local
 
-message: "hello, spring cloud -doc local"
+message: "hello, spring cloud -dock-local"
 
 ---
 

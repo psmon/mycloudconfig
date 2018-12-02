@@ -1,4 +1,13 @@
 ---
+eureka:
+    instance:
+        prefer-ip-address: true
+        ip-address: 127.0.0.1
+        
+
+message: "hello, spring cloud -unknown"
+        
+---
 spring:
   profiles: local
 
@@ -13,7 +22,7 @@ message: "hello, spring cloud -local"
 spring:
   profiles: dock-local
 
-message: "hello, spring cloud -local"
+message: "hello, spring cloud -dock-local"
 
 ---
 
@@ -25,6 +34,8 @@ message: "hello, spring cloud -dev"
 ---
 
 spring:
-  profiles: production
+  profiles: prd
+  
+  
+message: "hello, spring cloud -prd"
 
-message: "hello, spring cloud -production"

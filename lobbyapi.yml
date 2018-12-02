@@ -1,5 +1,5 @@
 ---
-message: "hello, spring cloud -default"
+message: "hello, spring cloud lobby api -default"
 
 ---
 spring:
@@ -8,42 +8,33 @@ spring:
 server:
   port: 9000
 
-eureka:
-    instance:
-        prefer-ip-address: true
-        ip-address: 127.0.0.1
 
-message: "hello, spring cloud -local"
+message: "hello, spring cloud lobby api -local"
 ---
 spring:
   profiles: local2
   
 server:
-  port: 9001
+  port: 9100
 
-eureka:
-    instance:
-        prefer-ip-address: true
-        ip-address: 127.0.0.1
-
-message: "hello, spring cloud -local"
+message: "hello, spring cloud lobby api -local2"
 
 ---
 spring:
   profiles: dock-local
 
-message: "hello, spring cloud -local"
+message: "hello, spring cloud lobby api -dock-local"
 
 ---
 
 spring:
   profiles: dev
 
-message: "hello, spring cloud -dev"
+message: "hello, spring cloud lobby api -dev"
 
 ---
 
 spring:
-  profiles: production
+  profiles: prd
 
-message: "hello, spring cloud -production"
+message: "hello, spring cloud lobby api -prd"

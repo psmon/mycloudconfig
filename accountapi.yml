@@ -1,16 +1,20 @@
-message: "hello, spring cloud -default"
+---
+message: "hello, spring cloud account api -default"
 
 ---
 spring:
   profiles: local
+  
+server:
+  port: 9002
 
-message: "hi, spring cloud -local"
+message: "hello, spring cloud account api -local"
 
 ---
 spring:
   profiles: dock-local
 
-message: "hello, spring cloud -doc local"
+message: "hello, spring cloud -local"
 
 ---
 
