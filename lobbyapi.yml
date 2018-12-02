@@ -1,3 +1,5 @@
+message: "hello, spring cloud -default"
+
 ---
 spring:
   profiles: local
