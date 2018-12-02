@@ -5,9 +5,13 @@ message: "hello, spring cloud -default"
 spring:
   profiles: local
   
-
 server:
   port: 9000
+
+eureka:
+    instance:
+        prefer-ip-address: true
+        ip-address: 127.0.0.1
 
 message: "hello, spring cloud -local"
 
