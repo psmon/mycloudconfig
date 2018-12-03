@@ -1,27 +1,30 @@
-message: "hello, spring cloud -default"
+message: "hello, spring cloud -front-web-default"
 
 ---
 spring:
   profiles: local
 
-message: "hi, spring cloud -local"
+server:
+  port: 8080
+  
+message: "hi, spring cloud -front-web-local"
 
 ---
 spring:
   profiles: dock-local
 
-message: "hello, spring cloud -doc local"
+message: "hello, spring cloud -front-web-doc local"
 
 ---
 
 spring:
   profiles: dev
 
-message: "hello, spring cloud -dev"
+message: "hello, spring cloud -front-web-dev"
 
 ---
 
 spring:
   profiles: prd
 
-message: "hello, spring cloud -prd"
+message: "hello, spring cloud -front-web-prd"
