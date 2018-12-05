@@ -1,5 +1,10 @@
 ---
 message: "hello, spring cloud -unknown"
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
         
 ---
 spring:
@@ -13,7 +18,7 @@ spring:
 eureka:
   instance:
     prefer-ip-address: true
-      ip-address: 127.0.0.1                
+    ip-address: 127.0.0.1
 
 ribbon:
   eureka:
