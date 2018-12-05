@@ -1,8 +1,8 @@
 ---
 eureka:
   instance:
-   prefer-ip-address: true
-    ip-address: 127.0.0.1                
+    prefer-ip-address: true
+      ip-address: 127.0.0.1                
 
 message: "hello, spring cloud -unknown"
         
@@ -11,14 +11,14 @@ spring:
   profiles: local
   cloud:
     gateway:
-     enabled: true
+      enabled: true
     kubernetes:
-     ribbon.enabled: false
+      ribbon.enabled: false
 
 eureka:
   instance:
-   prefer-ip-address: true
-    ip-address: 127.0.0.1                
+    prefer-ip-address: true
+      ip-address: 127.0.0.1                
 
 ribbon:
   eureka:
