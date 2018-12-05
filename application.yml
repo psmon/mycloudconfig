@@ -1,9 +1,4 @@
 ---
-eureka:
-  instance:
-    prefer-ip-address: true
-      ip-address: 111.0.0.1                
-
 message: "hello, spring cloud -unknown"
         
 ---
