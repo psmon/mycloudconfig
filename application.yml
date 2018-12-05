@@ -9,26 +9,20 @@ message: "hello, spring cloud -unknown"
 ---
 spring:
   profiles: local
-  
-spring:
-  profiles: local
   cloud:
     gateway:
       enabled: true
     kubernetes:
       ribbon.enabled: false
-  main:
-    allow-bean-definition-overriding=true
-
 
 eureka:
   instance:
     prefer-ip-address: true
       ip-address: 127.0.0.1
 
-
-
-
+ribbon:
+  eureka:
+   enabled: false
 
 message: "hello, spring cloud -local"
 
