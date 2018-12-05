@@ -1,11 +1,6 @@
 ---
 message: "hello, spring cloud -unknown"
 
-eureka:
-  instance:
-    prefer-ip-address: true
-    ip-address: 127.0.0.1
-        
 ---
 spring:
   profiles: local
@@ -14,15 +9,17 @@ spring:
       enabled: true
     kubernetes:
       ribbon.enabled: false
-
+      
 eureka:
   instance:
     prefer-ip-address: true
     ip-address: 127.0.0.1
+  client:
+    fetchRegistry=true        
 
 ribbon:
   eureka:
-    enabled: false
+    enabled: true
 
 message: "hello, spring cloud -local"
 
