@@ -22,7 +22,7 @@ eureka:
 
 ribbon:
   eureka:
-   enabled: false
+    enabled: false
 
 message: "hello, spring cloud -local"
 
