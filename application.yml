@@ -18,7 +18,10 @@ eureka:
 spring:
   cloud:
     gateway:
-      enabled: false
+      enabled: true
+    kubernetes:
+      ribbon.enabled: false
+
 
 message: "hello, spring cloud -local"
 
