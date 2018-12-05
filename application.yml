@@ -11,14 +11,14 @@ spring:
   profiles: local
 
 eureka:
-    instance:
-        prefer-ip-address: true
-        ip-address: 127.0.0.1
+  instance:
+    prefer-ip-address: true
+      ip-address: 127.0.0.1
 
 spring:
-	cloud:
-    	gateway:
-        	enabled: false
+  cloud:
+    gateway:
+      enabled: false
 
 message: "hello, spring cloud -local"
 
