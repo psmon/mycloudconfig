@@ -29,7 +29,23 @@ message: "hello, spring cloud -local"
 ---
 spring:
   profiles: dock-local
+  cloud:
+    gateway:
+      enabled: true
+    kubernetes:
+      ribbon.enabled: false
+      
+eureka:
+  instance:
+    prefer-ip-address: true
+    ip-address: 172.18.1.2
+  client:
+    fetchRegistry=true        
 
+ribbon:
+  eureka:
+    enabled: true
+    
 message: "hello, spring cloud -dock-local"
 
 ---
