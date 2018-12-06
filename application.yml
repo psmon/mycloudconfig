@@ -1,6 +1,9 @@
 ---
 message: "hello, spring cloud -unknown"
 
+service:
+  message: Hello World
+
 ---
 spring:
   profiles: local
