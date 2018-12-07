@@ -5,7 +5,11 @@ message: "hello, spring cloud account api -default"
 spring:
   profiles: local
   jpa:
-    hibernate.ddl-auto: create  
+    hibernate.ddl-auto: create
+  datasource:
+    url: jdbc:mysql://localhost:13306/account
+    username: root
+    password: root 
   
   
 server:
