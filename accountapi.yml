@@ -17,6 +17,20 @@ server:
     
 
 message: "hello, spring cloud account api -local"
+---
+spring:
+  profiles: local2
+  jpa:
+    hibernate.ddl-auto: none
+  datasource:
+    url: jdbc:mysql://localhost:13306/account
+    username: root
+    password: root 
+        
+server:
+  port: 9102
+
+message: "hello, spring cloud account api -local2"
 
 ---
 spring:
