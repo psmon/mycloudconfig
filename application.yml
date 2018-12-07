@@ -12,11 +12,6 @@ spring:
       enabled: true
     kubernetes:
       ribbon.enabled: false
-  datasource:
-    url: jdbc:mysql://localhost:13306/common
-    username: root
-    password: root       
-            
 
       
 eureka:
