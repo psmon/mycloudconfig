@@ -4,9 +4,13 @@ message: "hello, spring cloud account api -default"
 ---
 spring:
   profiles: local
+  jpa:
+    hibernate.ddl-auto: create  
+  
   
 server:
   port: 9002
+    
 
 message: "hello, spring cloud account api -local"
 

@@ -4,6 +4,11 @@ message: "hello, spring cloud lobby api -default"
 ---
 spring:
   profiles: local
+  datasource:
+    url: jdbc:mysql://localhost:13306/lobby
+    username: root
+    password: root   
+  
   
 server:
   port: 9000
