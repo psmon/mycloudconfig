@@ -2,7 +2,7 @@
     
 message: "hello, spring cloud account api -default"
 
---
+---
 
 spring:
   profiles: test
