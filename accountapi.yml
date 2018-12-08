@@ -21,7 +21,7 @@ spring:
   profiles: local
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:13306/test
+    url: jdbc:mysql://localhost:13306/test
     username: root
     password: root
   jpa:
