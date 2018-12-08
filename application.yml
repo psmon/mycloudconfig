@@ -3,6 +3,19 @@ message: "hello, spring cloud -unknown"
 
 service:
   message: Hello World
+  
+---
+
+spring:
+  profiles: test
+  jpa:
+    hibernate.ddl-auto: create
+  datasource:
+    url: jdbc:mysql://127.0.0.1:13306/test
+    username: root
+    password: root 
+    
+message: "hello, spring cloud default -test"  
 
 ---
 spring:
