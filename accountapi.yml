@@ -9,6 +9,19 @@ spring:
     
 message: "hello, spring cloud account api -default"
 
+--
+
+spring:
+  profiles: test
+  jpa:
+    hibernate.ddl-auto: none
+  datasource:
+    url: jdbc:mysql://127.0.0.1:13306/account
+    username: root
+    password: root 
+    
+message: "hello, spring cloud account api -test"
+
 ---
 spring:
   profiles: local
