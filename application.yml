@@ -8,12 +8,15 @@ service:
 
 spring:
   profiles: test
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:test
+    username: sa
+    password: 
   jpa:
     hibernate.ddl-auto: create
-  datasource:
-    url: jdbc:mysql://127.0.0.1:13306/test
-    username: root
-    password: root
+    generate-ddl: true
+    show-sql: true
     
 eureka:
   client:
@@ -46,12 +49,39 @@ eureka:
   client:
     serviceUrl:
       defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
-  instance:
-    preferIpAddress: true   
     fetch-registry: true
     register-with-eureka: true
     registry-fetch-interval-seconds: 5
     lease-expiration-duration-in-seconds: 10      
+  instance:
+    preferIpAddress: true   
+       
+ribbon:
+  eureka:
+    enabled: true
+
+message: "hello, spring cloud -local"
+
+---
+spring:
+  profiles: local-h2
+  cloud:
+    gateway:
+      enabled: true
+    kubernetes:
+      ribbon.enabled: false
+
+      
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+    fetch-registry: true
+    register-with-eureka: true
+    registry-fetch-interval-seconds: 5
+    lease-expiration-duration-in-seconds: 10      
+  instance:
+    preferIpAddress: true   
        
 ribbon:
   eureka:

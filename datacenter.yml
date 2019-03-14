@@ -1,6 +1,6 @@
 ---
     
-message: "hello, spring cloud account api -default"
+message: "hello, spring cloud datacenter -default"
 
 
 ---        
@@ -8,7 +8,7 @@ spring:
   profiles: local
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:13306/account
+    url: jdbc:mysql://localhost:13306/datacenter
     username: root
     password: root
   jpa:
@@ -17,13 +17,13 @@ spring:
     show-sql: true      
   
 server:
-  port: 9002
+  port: 10000
 ---        
 spring:
   profiles: local-dock
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://10.0.10.1:3306/account
+    url: jdbc:mysql://10.0.10.1:3306/datacenter
     username: root
     password: root
   jpa:
@@ -32,13 +32,13 @@ spring:
     show-sql: true      
   
 server:
-  port: 9002
+  port: 10000
 ---    
 spring:
   profiles: local-h2
   datasource:
     driverClassName: org.h2.Driver
-    url: jdbc:h2:mem:account
+    url: jdbc:h2:mem:datacenter
     username: sa
     password: 
   jpa:
@@ -47,34 +47,16 @@ spring:
     show-sql: true      
   
 server:
-  port: 9002
+  port: 10000
 
 
-message: "hello, spring cloud account api -local"
----
-spring:
-  profiles: local-h3
-  datasource:
-    driverClassName: org.h2.Driver
-    url: jdbc:h2:mem:account2
-    username: sa
-    password: 
-  jpa:
-    hibernate.ddl-auto: create
-    generate-ddl: true
-    show-sql: true      
-  
-server:
-  port: 9102
-
-
-message: "hello, spring cloud account api -local"
+message: "hello, spring cloud datacenter -local"
 ---
 spring:
   profiles: local2
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:13306/account
+    url: jdbc:mysql://localhost:13306/datacenter
     username: root
     password: root
   jpa:
@@ -83,16 +65,16 @@ spring:
     show-sql: true 
         
 server:
-  port: 9102
+  port: 10000
 
-message: "hello, spring cloud account api -local2"
+message: "hello, spring cloud datacenter -local2"
 
 ---
 spring:
   profiles: local3
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:13306/account
+    url: jdbc:mysql://localhost:13306/datacenter
     username: root
     password: root
   jpa:
@@ -101,9 +83,9 @@ spring:
     show-sql: true  
         
 server:
-  port: 9202
+  port: 10000
 
-message: "hello, spring cloud account api -local3"
+message: "hello, spring cloud datacenter -local3"
 
 
 ---
