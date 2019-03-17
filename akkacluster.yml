@@ -8,5 +8,5 @@ server:
 akka:
   hostname: "127.0.0.1"
   port: 2551
-  seed-nodes: ["akka.tcp://ClusterSystem@127.0.0.1:2552"]
+  seed-nodes: '["akka.tcp://ClusterSystem@127.0.0.1:2552"]'
   role: seed
