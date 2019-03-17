@@ -44,6 +44,9 @@ spring:
     kubernetes:
       ribbon.enabled: false
 
+akka:
+  hostname: 127.0.0.1
+  port: 2551
       
 eureka:
   client:
