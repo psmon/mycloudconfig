@@ -5,8 +5,7 @@ spring:
 server:
   port: 6000
 
-akka:
+yakka:
   hostname: "127.0.0.1"
   port: 2551
   role: seed
-
