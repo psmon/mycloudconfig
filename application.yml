@@ -3,6 +3,11 @@ message: "hello, spring cloud -unknown"
 
 service:
   message: Hello World
+
+akka:
+  hostname: "127.0.0.1"
+  port: 2551
+  role: seed
   
 ---
 
@@ -43,10 +48,6 @@ spring:
       enabled: true
     kubernetes:
       ribbon.enabled: false
-
-akka:
-  hostname: 127.0.0.1
-  port: 2551
       
 eureka:
   client:
