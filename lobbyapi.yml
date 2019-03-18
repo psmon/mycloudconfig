@@ -16,7 +16,7 @@ spring:
   
   
 server:
-  port: 9000
+  port: 9200
 
 
 message: "hello, spring cloud lobby api -local"
@@ -34,11 +34,49 @@ spring:
     show-sql: true 
   
 server:
-  port: 9100
+  port: 9201
 
 message: "hello, spring cloud lobby api -local2"
 
 ---
+spring:
+  profiles: local-h2
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:lobby
+    username: sa
+    password:
+  jpa:
+    hibernate.ddl-auto: create
+    generate-ddl: true
+    show-sql: true
+
+server:
+  port: 9200
+
+
+message: "hello, spring cloud lobby api -local-h3"
+---
+spring:
+  profiles: local-h3
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:lobby2
+    username: sa
+    password:
+  jpa:
+    hibernate.ddl-auto: create
+    generate-ddl: true
+    show-sql: true
+
+server:
+  port: 9201
+
+
+message: "hello, spring cloud lobby api2 -local-h3"
+---
+
+
 spring:
   profiles: dock-local
 
