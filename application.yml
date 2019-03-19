@@ -102,7 +102,7 @@ eureka:
     healthcheck:
       enabled: true
     serviceUrl:
-      defaultZone: ${EUREKA_URI:http://172.19.0.31:8761/eureka}
+      defaultZone: http://172.19.0.31:8761/eureka
   instance:
     preferIpAddress: true   
     fetch-registry: true
