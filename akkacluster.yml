@@ -10,3 +10,17 @@ akka:
   port: 2551
   seed-nodes: '["akka.tcp://ClusterSystem@127.0.0.1:2551"]'
   role: seed
+
+
+---
+spring:
+  profiles: dock-local
+
+server:
+  port: 8080
+
+akka:
+  hostname: "172.19.0.33"
+  port: 2552
+  seed-nodes: '["akka.tcp://ClusterSystem@172.19.0.33:2552"]'
+  role: seed
