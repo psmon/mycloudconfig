@@ -96,15 +96,25 @@ spring:
       enabled: true
     kubernetes:
       ribbon.enabled: false
-
+    inetutils:
+      ignoredInterfaces:
+        - docker
+        - eth.*
+        - lo
+      preferredNetworks:
+        - 172.19.0
 eureka:
+  client:
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://172.19.0.31:8761/eureka}
   instance:
     preferIpAddress: true
-  client:
-    registerWithEureka: false
-    fetchRegistry: false
-    serviceUrl:
-      defaultZone: http://172.19.0.31:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
+    registry-fetch-interval-seconds: 5
+    lease-expiration-duration-in-seconds: 10
 
 ribbon:
   eureka:
