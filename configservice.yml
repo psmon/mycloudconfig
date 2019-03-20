@@ -1,0 +1,5 @@
+---
+spring:
+  profiles: dock-local
+
+message: "hello, spring cloud configservice -dock-local"
