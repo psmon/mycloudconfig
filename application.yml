@@ -111,6 +111,7 @@ eureka:
       defaultZone: ${EUREKA_URI:http://172.19.0.31:8761/eureka}
   instance:
     preferIpAddress: true
+    ip-address: $MY_HOST_IP
     fetch-registry: true
     register-with-eureka: true
     registry-fetch-interval-seconds: 5
